@@ -1,0 +1,84 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.navBar{
+    background-color: $bg-color-secondary;
+    width: 90%;
+    @include center;
+    justify-content: space-between;
+    height: 70px;
+    border-radius: 35px;
+    padding-left: 20px;
+    padding-right: 10px;
+    position: fixed;
+    top: 20px;
+    left: 5%;
+    right: 5%;
+
+    &--logo{
+        color: $text-color-tertiary;
+    }
+
+    &--navigation{
+        ul{
+            @include center;
+            justify-content: initial;
+            gap: 20px;
+            list-style: none;
+            color: $text-color-tertiary;
+        }
+    }
+
+    &--menuBtn{
+        display: none;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+    }
+
+    @media(max-width: 768px){
+        padding-right: 20px;
+
+        &--logo{
+            h2{
+                font-size: 18px;
+            }
+        }
+
+        &--navigation{
+            display: none;
+        }
+
+        &--menuBtn{
+            @include center;
+        }
+    }
+}
+
+.nav-item{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+
+    &:hover{
+        color: $text-color-secondary;
+    }
+}
+
+.last{
+    height: 40px;
+    @include center;
+    padding-inline: 25px;
+    border: 1px solid $text-color-tertiary;
+    border-radius: 20px;
+    transition: all ease-in-out 0.3s;
+
+    &:hover{
+        border: 1px solid $text-color-secondary;
+        color: $text-color-secondary;
+    }
+}
