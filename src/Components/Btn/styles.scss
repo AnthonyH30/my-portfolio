@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.btn{
+    padding: 12px 24px;
+    width: fit-content;
+    border: 1px solid $text-color-secondary;
+    color: $text-color-secondary;
+    background-color: transparent;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+
+    &:hover{
+        background-color: $bg-color-tertiary;
+        color: $bg-color-primary;
+        font-weight: 600;
+    }
+}

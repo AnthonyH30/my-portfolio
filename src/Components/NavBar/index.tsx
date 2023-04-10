@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './styles.scss';
 import { RiMenu3Line } from 'react-icons/ri';
 import { GiUsaFlag, GiBrazilFlag } from 'react-icons/gi';
+import Logo from '../../assets/logo.png';
 
 export default function NavBar() {
 
@@ -11,6 +12,7 @@ export default function NavBar() {
   return (
     <div className='navBar'>
         <div className='navBar--logo'>
+          <img src={Logo} alt="Anthony's logo" />
             <h2>Anthony H.</h2>
         </div>
         <nav className='navBar--navigation'>
