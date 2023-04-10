@@ -1,0 +1,68 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.homeSection{
+    min-height: 100vh;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 135px;
+
+    &--myInfo{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+
+        &-apresentation{
+            color: $text-color-secondary;
+        }
+    
+        &-myName{
+            font-size: 60px;
+            color: $text-color-tertiary;
+        }
+    
+        &-myRole{
+            color: $text-color-primary;
+            font-size: 60px;
+        }
+    }
+
+    &--paragraphAndButton{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+
+        &-paragraph{
+            max-width: 500px;
+            color: $text-color-primary;
+            margin-block: 30px;
+        }
+    }
+
+    @media(max-width: 600px){
+        min-height: 70vh;
+
+        &--myInfo{
+            width: 90%;
+
+            &-myName{
+                font-size: 30px;
+            }
+        
+            &-myRole{
+                font-size: 30px;
+            }
+        }
+
+        &--paragraphAndButton{
+            width: 90%;
+
+
+            &-paragraph{
+                margin-top: 20px;
+            }
+        }
+    }
+}
