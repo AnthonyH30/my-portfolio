@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.sectionTitle{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 10px;    
+
+    &--number{
+        font-size: 18px;
+        font-weight: 500;
+        color: $text-color-secondary;
+    }
+
+    &--name{
+        color: $text-color-tertiary;
+        font-weight: 500;
+    }
+
+    &--dash{
+        height: 2px;
+        background-color: $bg-color-secondary;
+        width: 40%;
+    }
+}
+
+@media(max-width: 600px){
+    .sectionTitle{
+        width: 90%;
+    }
+}

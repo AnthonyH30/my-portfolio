@@ -1,0 +1,71 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.about{
+    min-height: 100vh;
+    @include center;
+    display: flex;
+    flex-direction: column;
+}
+
+.about--wrapper{
+    @include center;
+    width: 80%;
+    margin-top: 50px;
+
+    &--content{
+        width: 60%;
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        p{
+            color: $text-color-primary;
+        }
+    }
+
+    &--image{
+        width: 40%;
+        @include center;
+
+        .image--figure{
+            border: 2px solid $bg-color-tertiary;
+            width: 200px;
+            height: 200px;
+
+            .image--img{
+                width: 200px;
+                margin-left: -10px;
+                margin-top: -10px;
+            }
+        }
+    }
+}
+
+.techs{
+    color: $text-color-primary;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    max-width: 320px;
+    row-gap: 5px;
+    margin-top: 10px;
+}
+
+.about--experience{
+    width: 80%;
+
+    &--title{
+        font-weight: 500;
+        margin-top: 20px;
+        color: $text-color-primary;
+    }
+}
+
+@media(max-width: 600px){
+    .about--wrapper{
+        flex-direction: column-reverse;
+    }
+}
